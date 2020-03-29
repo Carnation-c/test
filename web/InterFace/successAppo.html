@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>预约成功</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var time1 = 3;
+            var second = document.getElementById("second");
+            var time2 = setInterval(function () {
+                second.innerHTML = time1;
+                time1--;
+                if (time1 == 0){
+                    clearInterval(time2);
+                    location.href = "http://localhost:8080/case1_war_exploded/InterFace/successlogin.jsp";
+                }
+            },1000);
+        }
+    </script>
+</head>
+<body>
+预约成功！！！<span id="second">3</span>秒后自动跳转到首页
+</body>
+</html>
